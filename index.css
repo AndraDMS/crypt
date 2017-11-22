@@ -1,0 +1,63 @@
+* {
+  box-sizing:border-box;
+}
+
+html, body {
+  margin:0;
+  min-width:100vw;
+  min-height:100vh;
+  font-family:Arial;
+}
+
+body { 
+  text-align: center;
+  background-color:#db6;
+}
+
+#b {
+  width:60%;
+  background-color:white;
+  display:inline-block;
+  min-height:100vh;
+}
+
+.head {
+  width:100%;
+  min-height:1em;
+  background-color:#ddd;
+  text-align:left;
+  padding:1em;
+  font-weight:bold;
+}
+
+#keyLengthTable {
+  width:95%;
+  height:10em;
+  background-color:#eee;
+  display:inline-block;
+}
+
+.graphBar {
+  width:5%;
+  height:100%;
+  background-color:#111;
+  transition:height 0.1s;
+  display:inline-block;
+  color:white;
+  overflow-y:hidden;
+  padding-top:.3em;
+}
+
+#bifTable {
+  background-color:#ddd;
+  display:inline-block;
+}
+
+#bifTable td {
+  width:2em;
+  border: 1px solid #ccc;
+}
+
+#bifTable tr {
+  height:2em;
+}

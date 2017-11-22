@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Cryptography</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<body>
+		<div id="b">
+		  
+			<div class="head">Key Length Checker</div>
+
+				<div class="head" style="font-weight:normal; background-color:#eee;">
+				  	Ciphertext: <textarea id="KLC_SUBST_ciphertext"></textarea>   
+				  	Max: <textarea></textarea>  
+				  	Remove non A-Z <input type="checkbox" id="KLC_SUBST_removeaz" value="remove"></input>
+		  		</div></br>
+			  	<div id="keyLengthTable">
+			  	</div></br></br>
+
+
+			<div class="head">Bifid</div>
+
+				<div class="head" style="font-weight:normal; background-color:#eee;">
+				  	Square: <textarea id="BIF_squaretxt"></textarea>   
+				  	<button id="BIF_squareshuffle">Shuffle</button>
+				  	Period: <textarea id="BIF_periodtxt"></textarea>   
+		  		</div></br>
+
+		  		<table id="bifTable">
+		  		<td></td>
+				</table></br></br>
+
+				<div class="head" style="font-weight:normal; background-color:#eee;">
+				  	Message: <textarea id="BIF_mes2ciph"></textarea>   
+				  	Ciphertext: <textarea id="BIF_ciphFromMes"></textarea>
+		  		</div>
+				<div class="head" style="font-weight:normal; background-color:#eee;">
+				  	Ciphertext: <textarea id="BIF_ciph2Mes"></textarea>   
+				  	Message: <textarea id="BIF_mesFromCiph"></textarea>
+		  		</div>
+
+		</div>
+
+		<script src="polyalphabetic_keylength.js"></script>
+		<script src="coincidence.js"></script>
+		<script src="bifid.js"></script>
+		<script src="bifid_display.js"></script>
+	</body>
+</html>
