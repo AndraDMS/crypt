@@ -59,12 +59,12 @@ document.getElementById("BIF_mes2ciph").addEventListener("keyup", function() {
 	updateBifidGUI()
 }); 
 
-document.getElementById("BIF_ciph2Mes").addEventListener("keyup", function() {
+document.getElementById("BIF_ciph2mes").addEventListener("keyup", function() {
 	updateBifidGUI()
 }); 
 
 function updateBifidGUI() {
   document.getElementById("BIF_ciphFromMes").value = new Bifid(document.getElementById("BIF_squaretxt").value,parseInt(document.getElementById("BIF_periodtxt").value)).encrypt(document.getElementById("BIF_mes2ciph").value);
-  document.getElementById("BIF_mesFromCiph").value = new Bifid(document.getElementById("BIF_squaretxt").value,parseInt(document.getElementById("BIF_periodtxt").value)).decrypt(document.getElementById("BIF_ciph2Mes").value);
+  document.getElementById("BIF_mesFromCiph").value = new Bifid(document.getElementById("BIF_squaretxt").value,parseInt(document.getElementById("BIF_periodtxt").value)).decrypt(document.getElementById("BIF_ciph2mes").value);
   generateBifSquare(document.getElementById("BIF_squaretxt").value);
 }
