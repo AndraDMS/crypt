@@ -9,6 +9,72 @@
 	<body>
 		<div id="c">
 			\( f(z) = e^z 
+			\\ \displaystyle f'(z) = \lim_{w \to 0} {\frac{f(z + w)- f(z)}{w}}, z = x + iy, w = h(a + ib)
+			\\ \displaystyle f'(z) = \lim_{h \to 0} {\frac{f(x + iy + h(a+ib))- f(x + iy)}{h(a+ib)}}
+			\\ \displaystyle f'(z) = \lim_{h \to 0} {\frac{e^{(x + iy) + h(a+ib)} - e^{(x + iy)}}{h(a+ib)}}
+			\\ \displaystyle f'(z) = e^x \lim_{h \to 0} { \left(
+			\frac{e^{i(y+hb-hai)}}{h(a+bi)} - 
+			\frac{e^{iy}}{h(a+bi)}
+			\right) }
+			\\ \displaystyle f'(z) = e^x \lim_{h \to 0} {
+			\frac{\cos{(y+hb-hai)}+i\sin{(y+hb-hai)} - (\cos{y}+i\sin{y}) }{h(a+bi)}
+			}
+			\\ \displaystyle f'(z) = e^x \lim_{h \to 0} { 
+			\frac{\cos{y}\cos{(hb-hai)}-\sin{y}\sin{(hb-hai)}+i\sin{y}\cos{(hb-hai)}+i\cos{y}\sin{(hb-hai)} - \cos{y}-i\sin{y} }{h(a+bi)}
+			}
+			\\ \displaystyle f'(z) = e^x \left( \lim_{h \to 0} { \left(
+			\frac{\cos{y}\cos{(hb-hai)}+i\sin{y}\cos{(hb-hai)} - \cos{y}-i\sin{y} }{h(a+bi)} \right) } -
+			\lim_{h \to 0} { \left( \frac{\sin{(hb-hai)}(\sin{y} - i\cos{y})}{h(a+bi)}
+			\right) } \right)
+			\\ \displaystyle f'(z) = e^x \left( \lim_{h \to 0} { \left(
+			\frac{\cos{y}\cos{(hb-hai)}+i\sin{y}\cos{(hb-hai)} - \cos{y}-i\sin{y} }{h(a+bi)} \right) } -
+			\lim_{h \to 0} { \left( \frac{\sin{(hb-hai)}}{h} \right) } \cdot
+			\lim_{h \to 0} { \left( \frac{\sin{y} - i\cos{y}}{a+bi} \right) } 
+			\right)
+			\\ \displaystyle f'(z) = e^x \left( \lim_{h \to 0} { \left(
+			\frac{\cos{y}\cos{(hb-hai)}+i\sin{y}\cos{(hb-hai)} - \cos{y}-i\sin{y} }{h(a+bi)} \right) } -
+			\lim_{h \to 0} { \left( \frac{ \frac{\mathrm d}{\mathrm d h} \sin{(hb-hai)}}{ \frac{\mathrm d}{\mathrm d h} h} \right) } \cdot
+			\lim_{h \to 0} { \left( \frac{\sin{y} - i\cos{y}}{a+bi} \right) } 
+			\right)
+			\\ \displaystyle f'(z) = e^x \left( \lim_{h \to 0} { \left(
+			\frac{\cos{y}\cos{(hb-hai)}+i\sin{y}\cos{(hb-hai)} - \cos{y}-i\sin{y} }{h(a+bi)} \right) } -
+			\lim_{h \to 0} { \left( \frac{ (b-ai)\cos{(hb-hai)}}{ 1 } \right) } \cdot
+			\lim_{h \to 0} { \left( \frac{\sin{y} - i\cos{y}}{a+bi} \right) } 
+			\right)
+			\\ \displaystyle f'(z) = e^x \left( \lim_{h \to 0} { \left(
+			\frac{\cos{y}\cos{(hb-hai)}+i\sin{y}\cos{(hb-hai)} - \cos{y}-i\sin{y} }{h(a+bi)} \right) } -
+			\lim_{h \to 0} { \left( \frac{ (b-ai)(\cos{(hb)}\cosh{(ha)} + i\sin{(hb)}\sinh{(ha)})}{ 1 } \right) } \cdot
+			\lim_{h \to 0} { \left( \frac{\sin{y} - i\cos{y}}{a+bi} \right) } 
+			\right)
+			\\ \displaystyle f'(z) = e^x \left( \lim_{h \to 0} { \left(
+			\frac{\cos{y}\cos{(hb-hai)}+i\sin{y}\cos{(hb-hai)} - \cos{y}-i\sin{y} }{h(a+bi)} \right) } -
+			\left( \frac{ (b-ai)(1 \cdot 1 + i\cdot 0 \cdot 0)}{ 1 } \right) \cdot
+			\lim_{h \to 0} { \left( \frac{\sin{y} - i\cos{y}}{a+bi} \right) } 
+			\right)
+			\\ \displaystyle f'(z) = e^x \lim_{h \to 0} { 
+			\frac{\cos{y}\cos{(hb-hai)}-h(b-ai)\sin{y}\cos{(hb-hai)}+i\sin{y}\cos{(hb-hai)}+ih(b-ai)\cos{y}\cos{(hb-hai)} - \cos{y}-i\sin{y} }{h(a+bi)}
+			}
+			\\ \displaystyle f'(z) = e^x \left( 
+			\lim_{h \to 0} \left( { \cos{(hb-hai)} } \right) \cdot
+			\lim_{h \to 0} \left( { \frac{\cos{y}-h(b-ai)\sin{y}+i\sin{y}+ih(b-ai)\cos{y}}{h(a+bi)} } \right) -
+			\lim_{h \to 0} \left( { \frac{ \cos{y}+i\sin{y} }{h(a+bi)} } \right)
+			\right)
+			\\ \displaystyle f'(z) = e^x \left( 
+			\lim_{h \to 0} \left( { \frac{\cos{y}-h(b-ai)\sin{y}+i\sin{y}+ih(b-ai)\cos{y}}{h(a+bi)} } \right) -
+			\lim_{h \to 0} \left( { \frac{ \cos{y}+i\sin{y} }{h(a+bi)} } \right)
+			\right)
+			\\ \displaystyle f'(z) = e^x 
+			\lim_{h \to 0} { \frac{ih(b-ai)\cos{y}-h(b-ai)\sin{y}}{h(a+bi)} } 
+			\\ \displaystyle f'(z) = e^x 
+			\lim_{h \to 0} { \frac{ih(b-ai)(\cos{y}+i\sin{y})}{h(a+bi)} } 
+			\\ \displaystyle f'(z) = e^x 
+			\lim_{h \to 0} { \frac{i(b-ai)e^{iy}}{(a+bi)} } 
+			\\ \displaystyle f'(z) = e^z
+			\lim_{h \to 0} { \frac{a+bi}{a+bi} } 
+			\\ \displaystyle f'(z) = e^z
+			 \)
+			<!---
+			\( f(z) = e^z 
 			\\ \displaystyle f'(z) = \lim_{w \to 0} {\frac{f(z + w)- f(z)}{w}},   w = h(a + bi) = hre^{i\theta}
 			\\ \displaystyle f'(z) = \lim_{h \to 0} {\frac{f(z + h(a+bi))- f(z)}{h(a+bi)}}
 			\\ \displaystyle f'(z) = \lim_{h \to 0} {\frac{e^{z + h(a+bi)} - e^z}{h(a+bi)}}
@@ -75,6 +141,7 @@
 			\lim_{h \to 0} { \left( \frac{ hb(\sin{\theta}+i\cos{\theta})}{hr} \right)}
 
 			 \)
+			 -->
 		</div>
 		<script type="text/javascript" src="index.js"></script>
 	</body>
