@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Quick Maths</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="c">
+			\( f(z) = e^z 
+			\\ \displaystyle f'(z) = \lim_{w \to 0} {\frac{f(z + w)- f(z)}{w}},   w = h(a + bi) = hre^{i\theta}
+			\\ \displaystyle f'(z) = \lim_{h \to 0} {\frac{f(z + h(a+bi))- f(z)}{h(a+bi)}}
+			\\ \displaystyle f'(z) = \lim_{h \to 0} {\frac{e^{z + h(a+bi)} - e^z}{h(a+bi)}}
+			\\ \displaystyle f'(z) = \lim_{h \to 0} {\frac{e^{z + h(a+bi)} - e^z}{hre^{i\theta}}}
+			\\ \displaystyle f'(z) = e^{z}\lim_{h \to 0} {\frac{(e^{h(a+bi)} - 1)(e^{-i\theta})}{hr}}
+			\\ \displaystyle f'(z) = e^{z}\lim_{h \to 0} {\frac{e^{ha+i(hb-\theta)} - e^{-i\theta}}{hr}}
+			\\ \displaystyle f'(z) = e^{z}\lim_{h \to 0} {\frac{e^{ha}(\cos{(hb-\theta)}+i\sin{(hb-\theta)}) - (\cos{\theta} - i\sin{\theta})}{hr}}
+			\\ \displaystyle f'(z) = e^{z}\lim_{h \to 0} {\frac{e^{ha}(\cos{(hb-\theta)}+i\sin{(hb-\theta)}) - \cos{\theta} + i\sin{\theta}}{hr}}
+			\\ \displaystyle f'(z) = e^{z}\lim_{h \to 0} {\frac{e^{ha}[\cos{(hb)}\cos{\theta}+\sin{(hb)}\sin{\theta}+i(\sin{(hb)}\cos{\theta} - \cos{(hb)}\sin{\theta})] - \cos{\theta} + i\sin{\theta}}{hr}}
+			\\ \displaystyle f'(z) = e^{z}\lim_{h \to 0} {\frac{e^{ha}[ \cos{(hb)}(\cos{\theta}-i\sin{\theta}) + \sin{(hb)}(\sin{\theta}+i\cos{\theta}) ] - \cos{\theta} + i\sin{\theta}}{hr}}
+			\\ \displaystyle f'(z) = e^{z}\lim_{h \to 0} {\left( e^{ha}\cdot\frac{\cos{(hb)}(\cos{\theta}-i\sin{\theta})}{hr} + e^{ha}\cdot\frac{\sin{(hb)}(\sin{\theta}+i\cos{\theta})}{hr} - \frac{\cos{\theta}}{hr} + \frac{i\sin{\theta}}{hr}  \right) }
+			\\ \displaystyle f'(z) = e^{z}\left( 
+			\lim_{h \to 0} { \left( e^{ha} \right)} \cdot
+			\lim_{h \to 0} { \left( \frac{\cos{(hb)}(\cos{\theta}-i\sin{\theta})}{hr} \right) } + 
+			\lim_{h \to 0} { \left( e^{ha} \right)} \cdot
+			\lim_{h \to 0} { \left( \frac{\sin{(hb)}(\sin{\theta}+i\cos{\theta})}{hr} \right)} - 
+			\lim_{h \to 0} { \left( \frac{\cos{\theta}}{hr} \right)} + 
+			\lim_{h \to 0} { \left( \frac{i\sin{\theta}}{hr} \right)}
+			\right)
+			\\ \displaystyle f'(z) = e^{z}\left( 
+			\lim_{h \to 0} { \left( \frac{\cos{(hb)}(\cos{\theta}-i\sin{\theta})}{hr} \right) } + 
+			\lim_{h \to 0} { \left( \frac{\sin{(hb)}(\sin{\theta}+i\cos{\theta})}{hr} \right)} - 
+			\lim_{h \to 0} { \left( \frac{\cos{\theta}}{hr} \right)} + 
+			\lim_{h \to 0} { \left( \frac{i\sin{\theta}}{hr} \right)}
+			\right)
+			\\ \displaystyle f'(z) = e^{z}\left( 
+			\lim_{h \to 0} { \left( \cos{(hb)} \right) } \cdot
+			\lim_{h \to 0} { \left( \frac{\cos{\theta}-i\sin{\theta}}{hr} \right) } + 
+			\lim_{h \to 0} { \left( \frac{\sin{(hb)}}{hr} \right)} \cdot
+			\lim_{h \to 0} { \left( \sin{\theta}+i\cos{\theta} \right)} - 
+			\lim_{h \to 0} { \left( \frac{\cos{\theta}}{hr} \right)} + 
+			\lim_{h \to 0} { \left( \frac{i\sin{\theta}}{hr} \right)}
+			\right)
+			\\ \displaystyle f'(z) = e^{z}\left( 
+			\lim_{h \to 0} { \left( \frac{\cos{\theta}-i\sin{\theta}}{hr} \right) } - 
+			\lim_{h \to 0} { \left( \frac{\cos{\theta}}{hr} \right)} + 
+			\lim_{h \to 0} { \left( \frac{i\sin{\theta}}{hr} \right)} + 
+			\lim_{h \to 0} { \left( \frac{\frac{\mathrm d}{\mathrm d h} \sin{(hb)}}{\frac{\mathrm d}{\mathrm d h} hr} \right)} \cdot
+			\lim_{h \to 0} { \left( \sin{\theta}+i\cos{\theta} \right)}
+			\right)
+			\\ \displaystyle f'(z) = e^{z}\left( 
+			\lim_{h \to 0} { \left( \frac{\cos{\theta}-i\sin{\theta}-\cos{\theta}+i\sin{\theta}}{hr} \right) } + 
+			\lim_{h \to 0} { \left( \frac{\frac{\mathrm d}{\mathrm d h} \sin{(hb)}}{\frac{\mathrm d}{\mathrm d h} hr} \right)} \cdot
+			\lim_{h \to 0} { \left( \sin{\theta}+i\cos{\theta} \right)}
+			\right)
+			\\ \displaystyle f'(z) = e^{z}\left( 
+			\lim_{h \to 0} { \left( \frac{0}{hr} \right) } +
+			\lim_{h \to 0} { \left( \frac{ b\cos{(hb)}}{r} \right)} \cdot
+			\lim_{h \to 0} { \left( \sin{\theta}+i\cos{\theta} \right)}
+			\right)
+			\\ \displaystyle f'(z) = e^{z}\left( 
+			\lim_{h \to 0} { \left( \frac{0}{hr} \right) } +
+			\lim_{h \to 0} { \left( \frac{ b\cos{(hb)}}{r} \right)} \cdot
+			\lim_{h \to 0} { \left( \sin{\theta}+i\cos{\theta} \right)}
+			\right)
+			\\ \displaystyle f'(z) = e^{z}\left( 
+			\lim_{h \to 0} { \left( \frac{0}{hr} \right) } +
+			\lim_{h \to 0} { \left( \frac{ b(\sin{\theta}+i\cos{\theta})}{r} \right)} \cdot
+			\lim_{h \to 0} { \left( \cos{(hb)} \right)}
+			\right)
+			\\ \displaystyle f'(z) = e^{z}
+			\lim_{h \to 0} { \left( \frac{0}{hr} + \frac{ b(\sin{\theta}+i\cos{\theta})}{r} \right)}
+			\\ \displaystyle f'(z) = e^{z}
+			\lim_{h \to 0} { \left( \frac{ hb(\sin{\theta}+i\cos{\theta})}{hr} \right)}
+
+			 \)
+		</div>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>
